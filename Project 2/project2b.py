@@ -178,9 +178,9 @@ eigvec=eig_vecs
 #print "Egenvektor_numpy=", eig_vecs #RIKTIG 
 
 
-"""
 
-#UNITTEST
+
+#UNITTEST 1
 
 def unittest1():
 	#sjekker om egenverdiene og egenvektorene til matrise d_unit er lik matlab sin egenverdi og egenvektor
@@ -205,7 +205,7 @@ def unittest1():
 	#print "Egenvektor_numpy=", eig_vecs
 	return
 
-#unittest1() #husk at n= 3, siden vi tester for 3x3 matrise
+unittest1() #husk at n= 3, siden vi tester for 3x3 matrise
 
 #UNITTEST NUMBER 2 
 
@@ -218,11 +218,11 @@ def unit_test2():
 	print "unittest_norm_leftside=", eee
 	print "unittest_norm_rightside=", norm_x
 
-#unit_test2() #n=3, fordi x er en 3x3 matrise
+unit_test2() #n=3, fordi x er en 3x3 matrise
 
 
 
-#Plot interaksjon
+#Plot non-interaction
 
 def plotnoninteraction():
 
@@ -246,11 +246,10 @@ def plotnoninteraction():
 	legend ([r"$\psi_0$","$\psi_1$","$\psi_2$","$\psi_3$"])
 	show()
 
-#plotnoninteraction()
+plotnoninteraction()
 
-"""
 
-#PLOT NON- INTERACTION
+#PLOT NTERACTION
 
 def plotinteraction():
 	for w in (0.01, 0.5, 1, 5):
@@ -287,18 +286,18 @@ def plotinteraction():
 	#plotting wavefunction
 
 		
-		#figure()
+		figure()
 
-		#plot(rho,first_eigvec**2,'-r')
-		#hold ('on') 
-		#plot(rho,second_eigvec**2,'-b')
-		#hold ('on')
-		#plot(rho,third_eigvec**2,'-g')  
-		#xlabel(r'$\rho$')
-		#ylabel(r'$\psi^2$')
-		#title('Probability distributions of two interacting electrons for four lowest-lying states for $\omega$= %s' %w)
-		#legend ([r"$\psi_0$","$\psi_1$","$\psi_2$","$\psi_3$"])
-		#show()
+		plot(rho,first_eigvec**2,'-r')
+		hold ('on') 
+		plot(rho,second_eigvec**2,'-b')
+		hold ('on')
+		plot(rho,third_eigvec**2,'-g')  
+		xlabel(r'$\rho$')
+		ylabel(r'$\psi^2$')
+		title('Probability distributions of two interacting electrons for four lowest-lying states for $\omega$= %s' %w)
+		legend ([r"$\psi_0$","$\psi_1$","$\psi_2$","$\psi_3$"])
+		show()
 
 		
 	return 
